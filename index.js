@@ -9,6 +9,7 @@ const bodyParser = require("body-parser");
 app.use(bodyParser.json());
 app.use(bpdyParser.urlencoded({ extends: false }));
 
+// routing
 app.get("/", (req, res) => {
   res.send("hello World");
 });
@@ -16,3 +17,5 @@ app.get("/", (req, res) => {
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`);
 });
+
+module.exports = app;
