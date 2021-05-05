@@ -1,6 +1,6 @@
 ---
 name: Add Issue
-about: New Issue 양식입니다.
+about: Add Issue 양식입니다.
 title: ''
 labels: ''
 assignees: ''
