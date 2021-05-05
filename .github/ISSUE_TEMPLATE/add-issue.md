@@ -8,7 +8,6 @@ assignees: ''
 ---
 
 ## ISSUE
-+ Group : server, client
 + Action : add, feature, style, modify, remove
 + To do : something
 
