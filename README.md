@@ -1,3 +1,3 @@
 # myTodo-server
 
-1
+MyTodo의 Server Repository입니다.
