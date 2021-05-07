@@ -18,8 +18,15 @@ app.use(
 );
 
 // routing
+const indexRouter = require("./routes/index");
+const searchRouter = require("./routes/search");
+
+app.use("/", indexRouter);
+app.use("/search", searchRouter);
+
+// get, post
 app.get("/", (req, res) => {
-  res.send("hello World");
+  res.status(200).send("hello World");
 });
 
 app.listen(port, () => {
