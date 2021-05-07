@@ -3,11 +3,11 @@ const app = express();
 const port = 3000;
 
 // middleware
-const bodyParser = require("body-parser");
+// const bodyParser = require("body-parser");
 
 // middleware 사용
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extends: false }));
+app.use(express.json());
+app.use(express.urlencoded({ extends: false }));
 
 // routing
 app.get("/", (req, res) => {
