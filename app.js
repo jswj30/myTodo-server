@@ -12,7 +12,7 @@ app.use(express.urlencoded({ extends: false }));
 app.use(
   cors({
     origin: "*",
-    methods: "GET, POST, HEAD, PUT, PATCH, DELETE",
+    methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
     credentials: true,
   })
 );
