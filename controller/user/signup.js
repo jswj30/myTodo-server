@@ -13,7 +13,7 @@ module.exports = {
       }
 
       // email, password, name, mobile정보를 DB(user)에 create
-      const [user, created] = await user.findOrCreate({
+      const [join, created] = await user.findOrCreate({
         where: { email: email },
         defaults: {
           password: password,
@@ -27,7 +27,7 @@ module.exports = {
         res.status(409).send("이미 존재하는 유저입니다.");
       } else {
         // 회원가입 성공했을 경우.
-        res.status(201).json(user);
+        res.status(201).json(join);
       }
     } catch (error) {
       res.status(500).send(error);
