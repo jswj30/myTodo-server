@@ -9,17 +9,18 @@ module.exports = {
       // 세션 regenerate
       req.session.regenerate(async (err) => {
         // user 찾기
-        const result = await user.findOne({
+        let result = await user.findOne({
           where: { email, password },
         });
         if (result) {
+          req.session.userid = result.id;
           res.status(200).send("success!");
         } else {
           res.status(404).send("유저를 찾을 수 없습니다.");
         }
       });
     } catch (error) {
-      res.status(500).send(error);
+      res.status(404).send(error);
     }
   },
 };
