@@ -5,14 +5,22 @@ const port = 5000;
 // middleware
 // const bodyParser = require("body-parser");
 const cors = require("cors");
+const session = require("express-session");
 
 // middleware 사용
 app.use(express.json());
 app.use(express.urlencoded({ extends: false }));
 app.use(
+  session({
+    secret: "secret key",
+    resave: false,
+    saveUninitialized: true,
+  })
+);
+app.use(
   cors({
-    origin: "*",
-    methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+    origin: true,
+    methods: ["GET", "HEAD", "PUT", "PATCH", "POST", "DELETE"],
     credentials: true,
   })
 );
