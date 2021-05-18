@@ -14,7 +14,7 @@ module.exports = {
         });
         if (result) {
           req.session.userid = result.id;
-          res.status(200).send("success!");
+          res.status(200).json(result);
         } else {
           res.status(404).send("유저를 찾을 수 없습니다.");
         }
