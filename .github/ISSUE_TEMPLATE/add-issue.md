@@ -3,7 +3,7 @@ name: Add Issue
 about: Add Issue 양식입니다.
 title: ''
 labels: ''
-assignees: ''
+assignees: jswj30
 
 ---
 
