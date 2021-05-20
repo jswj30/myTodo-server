@@ -14,7 +14,11 @@ module.exports = {
         });
         if (result) {
           req.session.userid = result.id;
-          res.status(200).json(result);
+          let info = {
+            id: result.id,
+            email: result.email,
+          };
+          res.status(200).json(info);
         } else {
           res.status(404).send("유저를 찾을 수 없습니다.");
         }
