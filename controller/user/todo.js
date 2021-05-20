@@ -54,6 +54,8 @@ module.exports = {
           jt,
         };
         res.status(201).json(result);
+      } else {
+        res.status(404).send("todo가 생성되지 않았습니다.");
       }
     } catch (err) {
       res.status(500).send(err);
