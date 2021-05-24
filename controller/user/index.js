@@ -3,4 +3,5 @@ module.exports = {
   signin: require("./signin"),
   todo: require("./todo"),
   signout: require("./signout"),
+  removeTodo: require("./removeTodo"),
 };

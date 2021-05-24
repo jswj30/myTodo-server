@@ -7,5 +7,6 @@ router.post("/signin", indexController.signin.post);
 router.get("/gettodo", indexController.todo.get);
 router.post("/posttodo", indexController.todo.post);
 router.post("/signout", indexController.signout.post);
+router.post("/removetodo", indexController.removeTodo.post);
 
 module.exports = router;
