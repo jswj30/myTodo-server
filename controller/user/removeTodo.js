@@ -3,23 +3,23 @@ const { todo, joinTable, status } = require("../../models");
 module.exports = {
   post: async (req, res) => {
     try {
-      const { todId, jtId, staId } = req.body;
+      const { id } = req.body;
       // todo 삭제
       let tod = await todo.destroy({
         where: {
-          id: todId,
+          id,
         },
       });
       // joinTable 삭제
       let jt = await joinTable.destroy({
         where: {
-          id: jtId,
+          id,
         },
       });
       // status 삭제
       let sta = await status.destroy({
         where: {
-          id: staId,
+          id,
         },
       });
       // 클라이언트에 응답
