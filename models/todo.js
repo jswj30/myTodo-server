@@ -14,7 +14,7 @@ module.exports = (sequelize, DataTypes) => {
         targetKey: "id",
       });
       models.todo.belongsToMany(models.status, {
-        through: "jointable",
+        through: "joinTable",
         foreignKey: "todoId",
       });
     }
