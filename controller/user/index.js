@@ -4,4 +4,5 @@ module.exports = {
   todo: require("./todo"),
   signout: require("./signout"),
   removeTodo: require("./removeTodo"),
+  important: require("./important"),
 };
