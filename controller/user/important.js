@@ -1,7 +1,7 @@
 const { status } = require("../../models");
 
 module.exports = {
-  post: async (req, res) => {
+  patch: async (req, res) => {
     try {
       const { id } = req.body;
       let staBefore = await status.findOne({
