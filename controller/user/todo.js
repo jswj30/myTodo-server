@@ -11,11 +11,24 @@ module.exports = {
             userId: sess.userid,
           },
           attributes: ["id", "content", "startDate"],
+          include: {
+            model: status,
+            attributes: ["important", "complete"],
+          },
         });
 
         if (todos) {
-          console.log(todos);
-          res.status(200).json(todos);
+          let todolist = todos.map((a) => {
+            return {
+              id: a.id,
+              content: a.content,
+              startDate: a.startDate,
+              important: a.statuses[0].important,
+              complete: a.statuses[0].complete,
+            };
+          });
+          // console.log(todolist);
+          res.status(200).json(todolist);
         } else {
           res.sendStatus(204);
         }
