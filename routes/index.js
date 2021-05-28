@@ -9,5 +9,6 @@ router.post("/posttodo", indexController.todo.post);
 router.post("/signout", indexController.signout.post);
 router.post("/removetodo", indexController.removeTodo.post);
 router.patch("/important", indexController.important.patch);
+router.get("/importanttodo", indexController.important.get);
 
 module.exports = router;
