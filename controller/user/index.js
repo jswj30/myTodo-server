@@ -5,4 +5,5 @@ module.exports = {
   signout: require("./signout"),
   removeTodo: require("./removeTodo"),
   important: require("./important"),
+  editUser: require("./editUser"),
 };
