@@ -16,12 +16,13 @@ module.exports = {
 
         if (userInfo) {
           const { email, password, name, mobile } = userInfo;
-          let hidePassword = password
-            .split("")
-            .reduce((acc, val) => (acc += "*"), "");
+          // let hidePassword = password
+          //   .split("")
+          //   .reduce((acc, val) => (acc += "*"), "");
           let result = {
             email,
-            password: hidePassword,
+            password,
+            // password: hidePassword,
             name,
             mobile,
           };
