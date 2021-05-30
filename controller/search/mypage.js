@@ -27,7 +27,7 @@ module.exports = {
           };
           res.status(200).send(result);
         } else {
-          res.status(404).send("유저를 찾을 수 없습니다.");
+          res.status(404).send("비밀번호가 틀렸습니다.");
         }
       } else {
         res.status(401).send("Not found Session!");
