@@ -70,7 +70,7 @@ module.exports = {
         res.status(404).send("Important가 수정되지 않았습니다.");
       }
     } catch (err) {
-      res.status(404).send(err);
+      res.status(404).json(err);
     }
   },
 };

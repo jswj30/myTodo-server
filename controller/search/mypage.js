@@ -26,7 +26,7 @@ module.exports = {
             name,
             mobile,
           };
-          res.status(200).send(result);
+          res.status(200).json(result);
         } else {
           res.status(404).send("비밀번호가 틀렸습니다.");
         }
@@ -34,7 +34,7 @@ module.exports = {
         res.status(401).send("Not found Session!");
       }
     } catch (err) {
-      res.status(404).send(err);
+      res.status(404).json(err);
     }
   },
 };
