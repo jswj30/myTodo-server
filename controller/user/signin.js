@@ -23,8 +23,8 @@ module.exports = {
           res.status(404).send("유저를 찾을 수 없습니다.");
         }
       });
-    } catch (error) {
-      res.status(404).send(error);
+    } catch (err) {
+      res.status(404).json(err);
     }
   },
 };

@@ -29,7 +29,7 @@ module.exports = {
         res.status(404).send("todo가 삭제되지 않았습니다.");
       }
     } catch (err) {
-      res.status(500).send(err);
+      res.status(500).json(err);
     }
   },
 };

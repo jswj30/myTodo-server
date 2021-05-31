@@ -29,8 +29,8 @@ module.exports = {
         // 회원가입 성공했을 경우.
         res.status(201).json(join);
       }
-    } catch (error) {
-      res.status(500).send(error);
+    } catch (err) {
+      res.status(500).json(err);
     }
   },
 };
