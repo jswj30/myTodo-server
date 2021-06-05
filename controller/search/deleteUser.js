@@ -16,6 +16,9 @@ module.exports = {
 
         if (deUser) {
           res.status(200).json(deUser);
+          // sess.destroy(() => {
+          //   res.status(200).json(deUser);
+          // });
         }
       } else {
         res.status(401).send("Not found Session!");
