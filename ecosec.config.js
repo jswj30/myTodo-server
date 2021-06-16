@@ -8,7 +8,16 @@ module.exports = {
 
       instances: 1,
       watch: true,
-      ignore_watch: ["logs"],
+      ignore_watch: [
+        ".git/index.lock",
+        "logs",
+        "public",
+        "node_modules",
+        "[\\/\\\\]\\./",
+        "pids",
+        ".git",
+        ".idea",
+      ],
       autorestart: true,
       max_memory_restart: "1G",
       env: {
