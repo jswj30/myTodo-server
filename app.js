@@ -19,9 +19,10 @@ app.use(
 );
 app.use(
   cors({
-    origin: ["https://js-mytodo.com", "https://api.js-mytodo.com"],
+    origin: true,
     methods: ["GET", "HEAD", "PUT", "PATCH", "POST", "DELETE"],
     credentials: true,
+    preflightContinue: false,
   })
 );
 
